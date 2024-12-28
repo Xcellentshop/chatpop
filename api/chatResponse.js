@@ -18,18 +18,24 @@ router.post('/responderChat', (req, res) => {
         const host = req.get('host');
         const baseUrl = `${protocol}://${host}`;
         
+        // URLs disponíveis para a API
+        const urls = {
+            dynamic: `${baseUrl}/api/responderChat`,
+            netlify: 'https://chatpop.netlify.app/api/responderChat'
+        };
+        
         // Processa a resposta recebida
         const chatResponse = req.body;
         
         // Aqui você pode adicionar a lógica para processar a resposta
         console.log('Resposta recebida:', chatResponse);
-        console.log('URL base:', baseUrl);
+        console.log('URLs disponíveis:', urls);
 
-        // Retorna sucesso
+        // Retorna sucesso com ambas as URLs
         res.status(200).json({
             success: true,
             message: 'Resposta recebida com sucesso',
-            baseUrl: baseUrl
+            urls: urls
         });
     } catch (error) {
         console.error('Erro ao processar resposta:', error);
