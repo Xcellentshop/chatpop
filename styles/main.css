@@ -1,0 +1,31 @@
+body {
+    background-color: #1a1f2c;
+    color: #ffffff;
+}
+
+.chat-container {
+    background-color: #2a2f3c;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.1);
+}
+
+.message-container {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 #1a1f2c;
+}
+
+.message-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.message-container::-webkit-scrollbar-track {
+    background: #1a1f2c;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 20px;
+}
+
+.police-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
